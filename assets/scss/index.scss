@@ -20,17 +20,19 @@ body {
     min-width: 20rem;
     min-height: 100vh;
     background-color: #0b101b;
+    display: flex;
+    justify-content: center;
 }
 
 .root-container {
     min-height: 100%;
-    min-width: 100%;
+    max-width: 108rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 8.12rem;
     padding: 1.5625rem;
+    flex: 1 1 auto;
 }
 
 nav {
@@ -55,12 +57,18 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    max-width: 60.375rem;
+    align-items: center;
+    justify-content: center;
+
 
     :nth-child(1) {
-        @include texts(118.5%, 2.592rem, 800, #C9CED6, center)
+        @include texts(118.5%, 2.592rem, 800, #C9CED6, center);
+        max-width: 55.687rem;
     }
 
     :nth-child(2) {
-        @include texts(1.469rem, 1rem, 300, #C9CED6, center)
+        @include texts(1.469rem, 1rem, 300, #C9CED6, center);
+        max-width: 39.625rem;
     }
 }
