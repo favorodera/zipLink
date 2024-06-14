@@ -25,14 +25,15 @@ body {
 }
 
 .root-container {
+    width: 100%;
     min-height: 100%;
     max-width: 108rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8.12rem;
-    padding: 1.5625rem;
-    flex: 1 1 auto;
+    padding: 1rem;
+
 }
 
 nav {
@@ -51,6 +52,7 @@ nav {
 .hero-container {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
 .hero-intro {
@@ -71,4 +73,50 @@ nav {
         @include texts(1.469rem, 1rem, 300, #C9CED6, center);
         max-width: 39.625rem;
     }
+}
+
+form {
+    max-width: 41.1875rem;
+    padding-inline: 0.5rem;
+    border-radius: 3rem;
+    border: 0.125rem solid #353C4A;
+    background: #181E29;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    gap: 0.5rem;
+
+    :nth-child(1) {
+        width: 1.5625rem;
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+    }
+
+    :nth-child(3) {
+        display: flex;
+        width: 2.8125rem;
+        height: 2.8125rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3rem;
+        border: none;
+        background: #144EE3;
+        cursor: pointer;
+        flex: 1 1 auto;
+    }
+}
+
+input {
+    height: 3.5rem;
+    flex: 1 1 auto;
+    background: none;
+    border: none;
+    outline: none;
+    @include texts(1.75rem, 1rem, 300, #C9CED6, start)
 }
