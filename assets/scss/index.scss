@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-@mixin logo {
-    font-size: 2.3071rem;
-    font-weight: 800;
-    line-height: 2.84006rem;
-    background: radial-gradient(100% 97.1% at 5.56% 79.01%, #eb568e 0%, #144ee3 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+@mixin texts($lineHeight, $fontSize, $fontWeight, $color, $alignment) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: $color ;
+    text-align: $alignment;
 }
 
 * {
@@ -15,6 +13,7 @@
     padding: 0rem;
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
+    color: #C9CED6;
 }
 
 body {
@@ -30,7 +29,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.63rem;
+    gap: 8.12rem;
+    padding: 1.5625rem;
 }
 
 nav {
@@ -43,5 +43,24 @@ nav {
 }
 
 .logo {
-    @include logo();
+    @include texts(2.84rem, 2.3rem, 800, #C9CED6, center);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    :nth-child(1) {
+        @include texts(118.5%, 2.592rem, 800, #C9CED6, center)
+    }
+
+    :nth-child(2) {
+        @include texts(1.469rem, 1rem, 300, #C9CED6, center)
+    }
 }
