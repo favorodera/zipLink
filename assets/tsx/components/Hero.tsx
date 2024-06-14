@@ -22,8 +22,9 @@ export default function Hero() {
           id="link-input"
           placeholder="Enter The Link Here"
         />
-        <button type="submit">
-          <img src={arrowIcon} alt="arrow" />
+        <button type="submit" id="button">
+          <p id="button-text">Shorten Now!</p>
+          <img src={arrowIcon} alt="arrow" id="button-image" />
         </button>
       </form>
     </section>

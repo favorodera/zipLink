@@ -107,8 +107,30 @@ form {
         border-radius: 3rem;
         border: none;
         background: #144EE3;
+        gap: 0.3rem;
         cursor: pointer;
         flex: 1 1 auto;
+
+        :nth-child(1) {
+            @include texts(1.75rem, 1rem, 600, #FFFFFF, center);
+            display: none;
+            width: max-content;
+        }
+
+        :nth-child(2) {
+            width: 1.5625rem;
+            height: 1.75rem;
+        }
+    }
+}
+
+@media only screen and (min-width:580px) {
+    #button-image {
+        display: none;
+    }
+
+    #button-text {
+        display: block;
     }
 }
 
