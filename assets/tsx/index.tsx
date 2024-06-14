@@ -1,11 +1,12 @@
-import React from "react"
+import React from "react";
+import Nav from "./components/Nav";
 
 function Index() {
-    return (
-        <>
-        <p>HELLO</p>
-        </>
-    )
+  return (
+    <>
+      <Nav></Nav>
+    </>
+  );
 }
 
-export default Index
+export default Index;
