@@ -3,8 +3,7 @@ import copyIcon from "../../icons/copy.svg";
 import { ShortenLinkContext } from "../hooks/ShortenLinkContext";
 
 export default function LinkDisplay() {
-  const { shortenedLink, isLoading, error, shortenLink } =
-    useContext(ShortenLinkContext);
+  const { shortenedLink, isLoading, error } = useContext(ShortenLinkContext);
 
   const copyLink = () => {
     window.navigator.clipboard.writeText(
@@ -13,11 +12,13 @@ export default function LinkDisplay() {
   };
 
   return (
-    <div className="link-display-container">
+    (shortenedLink ? <div className="link-display-container">
       <p className="link-display">{shortenedLink && shortenedLink.name}</p>
       <button className="copy-button">
         <img src={copyIcon} alt="copy" onClick={copyLink} />
       </button>
-    </div>
+    </div> : <div className="skeleton"></div> ) 
+      
+    
   );
 }

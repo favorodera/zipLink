@@ -201,3 +201,26 @@ footer {
         text-decoration: underline;
     }
 }
+
+.skeleton {
+    animation: skeleton-shimmer 1s infinite ease-in-out;
+    margin-top: -5rem;
+    height: 3.9375rem;
+    padding: 1.3125rem;
+    border-radius: 0.625rem;
+    background-color: #181E29;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+    width: 15rem;
+
+}
+
+
+@keyframes skeleton-shimmer {
+    from {
+        background-color: #181E29;
+    }
+
+    to {
+        background-color: #181e29ab;
+    }
+}

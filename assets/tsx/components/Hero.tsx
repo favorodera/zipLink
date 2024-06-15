@@ -3,7 +3,7 @@ import arrowIcon from "../../icons/arrow.svg";
 import { ShortenLinkContext } from "../hooks/ShortenLinkContext";
 
 export default function Hero() {
-  const { shortenedLink, isLoading, error, shortenLink } =
+  const { shortenLink } =
     useContext(ShortenLinkContext);
   let [longLink, setLongLink] = useState("");
 
