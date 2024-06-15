@@ -141,7 +141,8 @@ input {
     flex: 1 1 auto;
     background: none;
     border: none;
-    @include texts(1.75rem, 1rem, 900, #C9CED6, start)
+    @include texts(1.75rem, 1rem, 900, #C9CED6, start);
+    padding-left: 0.5rem;
 }
 
 .link-display-container {
