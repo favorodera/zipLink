@@ -1,5 +1,4 @@
 import React from "react";
-import linkIcon from "../../icons/link.svg";
 import arrowIcon from "../../icons/arrow.svg";
 
 export default function Hero() {
@@ -13,9 +12,6 @@ export default function Hero() {
         </p>
       </div>
       <form method="get">
-        <div>
-          <img src={linkIcon} alt="link" />
-        </div>
         <input
           type="url"
           name="link-input"
