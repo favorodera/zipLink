@@ -10,8 +10,7 @@ export default function Hero() {
 
   const submitLink = async (event: any) => {
     event.preventDefault();
-    const url = longLink;
-    await shortenLink(url);
+    await shortenLink(longLink);
   };
 
   return (

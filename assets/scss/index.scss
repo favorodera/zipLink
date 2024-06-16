@@ -85,7 +85,7 @@ nav {
 
 form {
     max-width: 41.1875rem;
-    padding-inline: 0.5rem;
+    padding-inline: 0rem 0.5rem;
     border-radius: 3rem;
     border: 0.125rem solid #353C4A;
     background: #181E29;
@@ -142,7 +142,8 @@ input {
     background: none;
     border: none;
     @include texts(1.75rem, 1rem, 900, #C9CED6, start);
-    padding-left: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 3rem 0rem 0rem 3rem;
 }
 
 .link-display-container {

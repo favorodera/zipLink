@@ -13,7 +13,7 @@ export default function LinkDisplay() {
 
   return (
     (shortenedLink ? <div className="link-display-container">
-      <p className="link-display">{shortenedLink && shortenedLink.name}</p>
+      <p className="link-display">{shortenedLink && shortenedLink.data.tiny_url}</p>
       <button className="copy-button">
         <img src={copyIcon} alt="copy" onClick={copyLink} />
       </button>
