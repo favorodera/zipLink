@@ -14,7 +14,7 @@ function ShortenLinkProvider(props: any) {
 
   const headers = {
     Authorization:
-      "Bearer o0yycoTXsHMxi8ehUoM8YgzY9L1dlV5IJ7QmhRaXdrfA91LqYXsyNGcHLrCU",
+      `Bearer ${import.meta.env.VITE_TINY_URL_API_TOKEN}`,
     "Content-Type": "application/json",
     accept: "application/json",
   };
@@ -34,9 +34,22 @@ function ShortenLinkProvider(props: any) {
         { headers }
       );
       setShortenedLink(response.data);
+      console.log(response);
+
       setRequestStatus("Success");
     } catch (error) {
-      setRequestStatus("Error");
+      setRequestStatus(():string => {
+        if(error.code === "ERR_BAD_REQUEST" ) {
+          return "Invalid Url"
+        }else if(error.code === "ERR_NETWORK") {
+          return "Network Error"
+        }else {
+          return "Error Shortening Url"
+        }
+
+      return requestStatus
+      });
+      console.error(error);
     }
   };
 

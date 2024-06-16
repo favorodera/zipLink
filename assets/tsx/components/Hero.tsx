@@ -56,7 +56,7 @@ export default function Hero() {
             </div>
           </div>
         )}
-        {requestStatus === "Error" && (
+        {requestStatus === "Invalid Url" && (
           <div
             style={{
               display: "flex",
@@ -77,7 +77,60 @@ export default function Hero() {
               <div style={{ width: "1rem", height: "1rem" }}>
                 <img src={errorIcon} alt="" />
               </div>{" "}
-              <p style={{ color: "#FF3838" }}>Error Shortening Link</p>
+              <p style={{ color: "#FF3838" }}>Invalid Url</p>
+            </div>
+          </div>
+        )}
+        {requestStatus === "Network Error" && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "1rem",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+              }}
+            >
+              <div style={{ width: "1rem", height: "1rem" }}>
+                <img src={errorIcon} alt="" />
+              </div>{" "}
+              <p style={{ color: "#FF3838" }}>Network Error</p>
+            </div>
+            <button className="retry-button" onClick={submitLink}>
+              Retry
+            </button>
+          </div>
+        )}
+        {requestStatus === "Error Shortening Url" && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "1rem",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+              }}
+            >
+              <div style={{ width: "1rem", height: "1rem" }}>
+                <img src={errorIcon} alt="" />
+              </div>{" "}
+              <p style={{ color: "#FF3838" }}>Error Shortening Url</p>
             </div>
             <button className="retry-button" onClick={submitLink}>
               Retry
