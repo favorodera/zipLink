@@ -1,5 +1,5 @@
 # ZipLink - A Url Shortening Tool
-
+![ZipLink Screenshot](./assets/images/ziplink.png)
 ###
 
 ###
