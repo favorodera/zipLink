@@ -17,8 +17,8 @@ Tired of sharing long and messy URLs? ZipLink to the rescue! ⚡ This user-frien
 ## Features (More Coming):
 
 - **Effortless Shortening:** Simply paste your long URL and ZipLink does the magic with the click of a button Instantly generating a clean and compact shortened link.
-- **Intuitive Interface** Enjoy a modern and user-friendly design that makes shortening URLs a breeze. Clear instructions and straightforward navigation make it simple for anyone to use.
-- **Easy Link Copying** No need to drag your mouse or "press and hold" to copy your shortened links... Juuust click the copy button and its all yours!
+- **Intuitive Interface:** Enjoy a modern and user-friendly design that makes shortening URLs a breeze. Clear instructions and straightforward navigation make it simple for anyone to use.
+- **Easy Link Copying:** No need to drag your mouse or "press and hold" to copy your shortened links... Juuust click the copy button and its all yours!
 
 ###
 
