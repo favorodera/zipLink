@@ -13,8 +13,7 @@ function ShortenLinkProvider(props: any) {
   const [requestStatus, setRequestStatus] = useState("Awaiting");
 
   const headers = {
-    Authorization:
-      `Bearer ${import.meta.env.VITE_TINY_URL_API_TOKEN}`,
+    Authorization: `Bearer ${import.meta.env.VITE_TINY_URL_API_TOKEN}`,
     "Content-Type": "application/json",
     accept: "application/json",
   };
@@ -33,23 +32,20 @@ function ShortenLinkProvider(props: any) {
         data,
         { headers }
       );
-      setShortenedLink(response.data);
+      setShortenedLink(response.data.data.tiny_url);
       console.log(response);
 
       setRequestStatus("Success");
     } catch (error) {
-      setRequestStatus(():string => {
-        if(error.code === "ERR_BAD_REQUEST" ) {
-          return "Invalid Url"
-        }else if(error.code === "ERR_NETWORK") {
-          return "Network Error"
-        }else {
-          return "Error Shortening Url"
+      setRequestStatus((): string => {
+        if (error.code === "ERR_BAD_REQUEST") {
+          return "Invalid Url";
+        } else if (error.code === "ERR_NETWORK") {
+          return "Network Error";
+        } else {
+          return "Error Shortening Url";
         }
-
-      return requestStatus
       });
-      console.error(error);
     }
   };
 
