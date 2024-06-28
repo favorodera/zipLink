@@ -38,7 +38,7 @@ Tired of sharing long and messy URLs? ZipLink to the rescue! ⚡ This user-frien
 - Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/ZipLink.git
+git clone https://github.com/favorodera/ZipLink.git
 ```
 
 - Install dependencies:
